@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+    --dark-color: rgba(105, 9, 230, 0.527);
+    --medium-color: #333;
+    --ligh-color: rgba(231, 172, 9, 0.26);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    color: var(--ligh-color);
+    padding: 3rem;
+}
+
+.header {
+   height: 95vh;
+   background-image: linear-gradient(to right bottom, var(--ligh-color),var(--dark-color)), url("../img/Kosmos.jpg");
+   clip-path: polygon(24% 40%, 75% 0%, 68% 59%, 100% 92%, 27% 90%, 0% 50%);
+}
+.header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    text-transform: uppercase;
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    animation: moveInFromLeft 3s ease-out;
+}
+
+@keyframes moveInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.heading-primary--sub {
+    display: black;
+    font-size: 2rem;
+    letter-spacing: 1,32rem;
+    animation: moveInFromRight 3s ease-out
+}
+
+.heading-primary--sub {
+    display: black;
+    font-size: 2rem;
+    letter-spacing: 1,32rem;
+    animation: moveInFromRight 3s ease-out
+}
+
+@keyframes moveInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+
+.btn--head {
+    display: block;
+    text-decoration: none;
+    border: 3px solid var(--ligh-color);
+    color: var(--ligh-color);
+    text-transform: uppercase;
+    width: fit-content;
+    padding: 2rem;
+    margin: 2rem auto -15rem auto;
+    animation: fadeIn 3s;
+    transition: transform 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
